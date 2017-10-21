@@ -1,0 +1,45 @@
+.ticket-table-wrapper {
+  margin: 100px auto;
+  background-color: rgba(235, 233, 247, 1);
+  width: 80%;
+  height: 100%;
+  padding: 24px;
+}
+
+#ticket-table {
+  width: 100%;
+  background-color: white;
+  border-collapse: collapse;
+}
+
+#ticket-table tr {
+  height: 74px;
+}
+
+#ticket-table tbody td {
+  border-top-style: solid;
+  border-color: #ecedef;
+  text-align: center;
+}
+#ticket-table tbody td img {
+  width: 50px;
+  vertical-align: middle;
+}
+
+#ticket-table tbody td .add-ticket-button {
+  width: 39px;
+  height: 39px;
+  border-radius: 68px;
+  background-color: #1de9b6;
+  border-style: none;
+  color: white;
+  font-size: 24px;
+  margin-left: 24px;
+  vertical-align: middle;
+}
+
+#ticket-table tbody td input {
+  width: 24px;
+  border: none;
+  font-size: 16px;
+}
