@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">o
+<meta charset="UTF-8">
 
 <head>
   <title>Cool Ticket App</title>
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/ticket-table.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
 </head>
 
 <body>
@@ -26,25 +28,12 @@
           <th>Tickets</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>
-            <img src="./assets/billy-idol-icon.png" />
-            <span>
-              Billy Idol
-            </span>
-          </td>
-          <td>Manchester, UK</td>
-          <td>2017-12-02</td>
-          <td>200$</td>
-          <td>
-            <input type="number" value="2">
-            <button class="add-ticket-button">+</button>
-          </td>
-        </tr>
+      <tbody id="ticket-table-body">
       </tbody>
     </table>
   </div>
+  <script src="./assets/data.js" type="text/javascript"></script>
+  <script src="./js/table.js" type="application/javascript"></script>
 </body>
 
 </html>

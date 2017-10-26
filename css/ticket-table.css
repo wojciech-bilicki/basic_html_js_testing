@@ -24,6 +24,7 @@
 #ticket-table tbody td img {
   width: 50px;
   vertical-align: middle;
+  margin-right: 16px;
 }
 
 #ticket-table tbody td .add-ticket-button {
