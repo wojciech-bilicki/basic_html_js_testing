@@ -1,0 +1,24 @@
+{
+  "name": "html_css_js_basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "simplehttpserver ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wojciech-bilicki/basic_html_js_testing.git"
+  },
+  "author": "Wojciech Bilicki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wojciech-bilicki/basic_html_js_testing/issues"
+  },
+  "homepage":
+    "https://github.com/wojciech-bilicki/basic_html_js_testing#readme",
+  "dependencies": {
+    "simplehttpserver": "0.0.6"
+  }
+}
