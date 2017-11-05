@@ -1,7 +1,32 @@
 var tableBody = document.getElementById('ticket-table-body');
 
-var tableRows = DATA.map(function(dataRow) {
+var createRowInput = function() {
+  var input = document.createElement('input');
+  input.type = 'number';
+  input.value = 1;
+  input.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+  return input;
+};
+
+var createRowButton = function() {
+  var button = document.createElement('button');
+  button.className = 'add-ticket-button';
+  button.textContent = '+';
+  button.addEventListener('click', function(e) {
+    var ticketAmount = e.target.previousSibling.value;
+    var ticketId = e.target.parentNode.parentNode.getAttribute('data-id');
+    ticketService.addTicket(ticketId, parseInt(ticketAmount));
+    e.stopPropagation();
+  });
+  return button;
+};
+
+var createRow = function(dataRow) {
   var row = document.createElement('tr');
+
+  row.setAttribute('data-id', dataRow.id);
 
   for (var i = 0; i < 5; i++) {
     var cell = document.createElement('td');
@@ -28,31 +53,26 @@ var tableRows = DATA.map(function(dataRow) {
     }
 
     if (i === 4) {
-      var input = document.createElement('input');
-      input.type = 'number';
-      input.value = 1;
-      var button = document.createElement('button');
-      button.className = 'add-ticket-button';
-      button.textContent = '+';
-      button.addEventListener('click', function(e) {
-        console.log('I clicked a button');
-        e.stopPropagation();
-      });
-      cell.appendChild(input);
-      input.addEventListener('click', function(e) {
-        e.stopPropagation();
-      });
-      cell.appendChild(button);
+      cell.appendChild(createRowInput());
+
+      cell.appendChild(createRowButton());
     }
 
     row.appendChild(cell);
   }
   return row;
-});
+};
+
+var tableRows = DATA.map(createRow);
 
 tableRows.forEach(function(element) {
   element.addEventListener('click', function(e) {
-    console.log('I clicked a row');
+    var artistId =
+      e.target.parentNode.getAttribute('data-id') ||
+      e.target.parentNode.parentNode.getAttribute('data-id');
+
+    localStorage.setItem('artistId', artistId);
+    window.location.assign('./details.html');
   });
   tableBody.appendChild(element);
 });

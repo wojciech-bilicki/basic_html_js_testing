@@ -20,7 +20,13 @@
   border-top-style: solid;
   border-color: #ecedef;
   text-align: center;
+  cursor: pointer;
 }
+
+#ticket-table tbody tr:hover {
+  background-color: rgb(115, 135, 238);
+}
+
 #ticket-table tbody td img {
   width: 50px;
   vertical-align: middle;
@@ -43,4 +49,31 @@
   width: 24px;
   border: none;
   font-size: 16px;
+}
+
+.no-ticket-warning {
+  text-align: center;
+  color: rebeccapurple;
+}
+
+#ticket-table .small-button {
+  width: 88px;
+  height: 30px;
+  border: none;
+  border-radius: 24px;
+  color: white;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+#ticket-table .pay-button {
+  background-color: #1de9b6;
+}
+
+#ticket-table .withdraw-button {
+  background-color: #fbff0b;
+}
+
+#ticket-table .delete-button {
+  background-color: #f44236;
+  margin-left: 8px;
 }
