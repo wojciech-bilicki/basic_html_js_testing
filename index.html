@@ -1,0 +1,48 @@
+<html>
+
+<head>
+  <title>Cool Ticket App</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/header.css">
+
+</head>
+
+<body>
+  <header id="top-header">
+    <input class="search-input" name="search-term" type="text" placeholder="Artist or city">
+
+    <button name="search">Search!</button>
+    <a href="./ticketlist.html"></a>
+  </header>
+  <div class="ticket-table-wrapper">
+    <table id="ticket-table">
+      <thead>
+        <tr>
+          <th>Artist</th>
+          <th>City</th>
+          <th>Date</th>
+          <th>Price</th>
+          <th>Tickets</th>
+        </tr>
+      </thead>
+      <tbody id="ticket-table-body">
+        <tr>
+          <td>
+            <img src="./assets/artist_icons/billy_idol_icon.png" />
+            <span>Billy Idol</span>
+          </td>
+          <td>Manchster, UK</td>
+          <td>2017-12-02</td>
+          <td>200$</td>
+          <td>
+            <input type="number" value="2">
+            <button class="add-ticket-button">+</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

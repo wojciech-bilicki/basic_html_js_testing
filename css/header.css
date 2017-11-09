@@ -1,0 +1,48 @@
+#top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: rgba(131, 107, 219, 0.177);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+#top-header input {
+  width: 50%;
+  background-color: #fbfbfb;
+  height: 50px;
+  font-size: 16px;
+  text-indent: 16px;
+  border: 1px solid #474b4f;
+  border-radius: 5px;
+}
+
+#top-header button {
+  height: 50px;
+  margin-left: 4%;
+  border-radius: 5px;
+  background-image: linear-gradient(259deg, #1de9b6, #1dc4e9);
+  border-style: none;
+  color: white;
+  padding: 16px 75px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+#top-header a {
+  margin-left: auto;
+  width: 77px;
+  height: 77px;
+  border-radius: 40px;
+  background-color: #a389d4;
+  background-image: url(../assets/Document-Icon.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 60%;
+}
