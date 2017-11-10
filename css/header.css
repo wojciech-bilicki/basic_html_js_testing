@@ -4,7 +4,7 @@
   align-items: center;
   height: 100px;
   background-color: rgba(131, 107, 219, 0.177);
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
