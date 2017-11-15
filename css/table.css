@@ -42,3 +42,8 @@
   border: none;
   font-size: 16px;
 }
+
+.no-ticket-warning {
+  text-align: center;
+  color: #afd123;
+}

@@ -1,6 +1,7 @@
 var tableBody = document.getElementById('ticket-table-body');
 
-var tableRows = DATA.map(function(dataRow){
+
+var createRow = function(dataRow){
   var row = document.createElement('tr');
 
   for (var i = 0; i < 5; i = i + 1) {
@@ -35,8 +36,11 @@ var tableRows = DATA.map(function(dataRow){
       var button = document.createElement('button');
       button.className = "add-ticket-button";
       button.textContent = "+";
-      button.addEventListener('click', function() {
+      button.addEventListener('click', function(event) {
         button.style.backgroundColor = "blue";
+        console.log("I clicked a button!");
+        localStorage.setItem("Chosen Artist", dataRow.name);
+        event.stopPropagation();
       });
       cell.appendChild(input);
       cell.appendChild(button);
@@ -46,9 +50,17 @@ var tableRows = DATA.map(function(dataRow){
   }
 
   return row;
-});
+}
 
-tableRows.forEach(function(element) {
+var tableRows = DATA.map(createRow);
 
-  tableBody.appendChild(element);
+tableRows.forEach(function(row) {
+
+  row.addEventListener('click', function(){
+    var chosenArtist = localStorage.getItem("Chosen Artist");
+    console.log(chosenArtist);
+    console.log('I clicked a row!');
+  });
+
+  tableBody.appendChild(row);
 })
