@@ -42,9 +42,6 @@ function insertNoTicketInfo(){
   infoNode.className = 'no-ticket-warning';
 
   var table = document.getElementById('ticket-table');
-  var oldNode = document.getElementsByClassName('no-ticket-warning')
-  if(oldNode != 'undefined') {
-    document.removeChild(oldNode);
-  }
+
   insertAfter(infoNode, table);
 }

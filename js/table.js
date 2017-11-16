@@ -3,6 +3,7 @@ var tableBody = document.getElementById('ticket-table-body');
 
 var createRow = function(dataRow){
   var row = document.createElement('tr');
+  row.setAttribute('data-id', dataRow.id);
 
   for (var i = 0; i < 5; i = i + 1) {
     var cell = document.createElement('td');
@@ -33,13 +34,18 @@ var createRow = function(dataRow){
       input.type = "number";
       input.value = 3;
 
+      input.addEventListener('click', function(e){
+        e.stopPropagation();
+      })
+
       var button = document.createElement('button');
       button.className = "add-ticket-button";
       button.textContent = "+";
       button.addEventListener('click', function(event) {
-        button.style.backgroundColor = "blue";
-        console.log("I clicked a button!");
-        localStorage.setItem("Chosen Artist", dataRow.name);
+        var ticketAmount = event.target.previousSibling.value;
+        var ticketId = event.target.parentNode.parentNode.getAttribute('data-id');
+
+        ticketService.addTicket(ticketId, ticketAmount);
         event.stopPropagation();
       });
       cell.appendChild(input);

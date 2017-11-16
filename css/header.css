@@ -46,3 +46,25 @@
   background-position: center center;
   background-size: 50% 60%;
 }
+
+#top-header h1 {
+  height: 60px;
+  font-family: OpenSans;
+  font-size: 44px;
+  font-weight: 300;
+  text-align: left;
+  color: #393c40;
+}
+
+#top-header .pay-button {
+  margin-left: auto;
+  background-color: #1de9b6;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  background-image: none;
+}
+
+#top-header .delete-button {
+  background-color: #f44236;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  background-image: none;
+}
